@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>This is the MVP of the website</h2>
+
+<p>Please input the estimated amount of steps that you took today:</p>
+
+<input id="numb">
+
+<button type="button" onclick="stepsForm()">Submit</button>
+
+<p id = "demo"></p>
+<script>
+
+
+var steps;
+function stepsForm() {
+    var text;
+
+    // Get the value of the input field with id="numb"
+    steps = document.getElementById("numb").value;
+
+    // If x is Not a Number or less than one or greater than 10
+    if (isNaN(steps) || steps < 1) {
+        text = "Input not valid. Input a value that is greater than 1";
+        document.getElementById("demo").innerHTML = text;
+      }
+      else{
+        document.getElementById("demo").innerHTML = "";
+      }
+    }
+
+</script>
+
+</body>
+</html>
